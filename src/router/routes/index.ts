@@ -1,56 +1,54 @@
-// // Layouts
-// import AnonymousLayout from "../layouts/AnonymousLayout";
-// import MainLayout from "../layouts/MainLayout";
+// Layouts
+import DefautlLayout from "../../layouts/Default";
+import PanelLayout from "../../layouts/Panel";
 
-// // Pages
-// import Login from "../pages/Login";
-// import Home from "../pages/Home";
-// import CreateUser from "../pages/CreateUser";
-// import ListUsers from "../pages/ListUsers";
+// Pages
+import LoginPage from "../../pages/Auth/Login";
+import HomePage from "../../pages/Home";
 
-// export const routes = [
-// {
-//     layout: AnonymousLayout,
-//     routes: [
-//       {
-//         name: 'login',
-//         title: 'Login page',
-//         component: Login,
-//         path: '/login',
-//         isPublic: true,
-//       }
-//     ]
-//   },
-// {
-//     layout: MainLayout,
-//     routes: [
-//       {
-//         name: 'home',
-//         title: 'Home page',
-//         component: Home,
-//         path: '/home'
-//       },
-//       {
-//         name: 'users',
-//         title: 'Users',
-//         hasSiderLink: true,
-//         routes: [
-//           {
-//             name: 'list-users',
-//             title: 'List of users',
-//             hasSiderLink: true,
-//             component: ListUsers,
-//             path: '/users'
-//           },
-//           {
-//             name: 'create-user',
-//             title: 'Add user',
-//             hasSiderLink: true,
-//             component: CreateUser,
-//             path: '/users/new'
-//           }
-//         ]
-//       }
-//     ]
-//   }
-// ];
+export const routes = [
+  {
+    layout: DefautlLayout,
+    routes: [
+      {
+        name: "login",
+        title: "Login page",
+        component: LoginPage,
+        path: "/login",
+        isPublic: true,
+      },
+    ],
+  },
+  {
+    layout: PanelLayout,
+    routes: [
+      {
+        name: "home",
+        title: "Home page",
+        component: HomePage,
+        path: "/",
+      },
+      {
+        name: "users",
+        title: "Users",
+        hasSiderLink: true,
+        routes: [
+          //   {
+          //     name: 'list-users',
+          //     title: 'List of users',
+          //     hasSiderLink: true,
+          //     component: ,
+          //     path: '/users'
+          //   },
+          //   {
+          //     name: 'create-user',
+          //     title: 'Add user',
+          //     hasSiderLink: true,
+          //     component: CreateUser,
+          //     path: '/users/new'
+          //   }
+        ],
+      },
+    ],
+  },
+];

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const PanelLayout = () => {
   return (
-    <div>PanelLayout</div>
-  )
-}
+    <div>
+      PanelLayout
+      <Outlet />
+    </div>
+  );
+};
 
-export default PanelLayout
+export default PanelLayout;
