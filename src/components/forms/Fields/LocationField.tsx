@@ -27,19 +27,13 @@ const LocationField = (props: ILocationFieldProps) => {
   const {
     label = "",
     id,
-    labelClassName,
-    name = "location",
     error,
-    required,
     className,
-    children,
     value,
     defaultValue,
-    type = "text",
     disabled = false,
     isOptional,
     fullWidth,
-    editable = true,
     onChange,
   } = props;
 

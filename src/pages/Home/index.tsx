@@ -1,4 +1,3 @@
-import React from "react";
 import { Blog, Faqs, Hero } from "../../components/landing";
 import { Footer, Navbar } from "../../components/common";
 import SectionTitle from "../../components/landing/SectionTitle";

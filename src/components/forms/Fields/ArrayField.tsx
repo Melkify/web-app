@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
 import { Controller } from "react-hook-form";
 import Label from "./Label";
-import clsx from "clsx";
 
 interface Props {
   data: any;
@@ -14,7 +12,6 @@ interface Props {
   isMulti: boolean;
 }
 const ArrayField = ({
-  data,
   fields,
   append,
   remove,

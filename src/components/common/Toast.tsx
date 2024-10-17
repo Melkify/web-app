@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import clsx from "clsx";
 import { useToast } from "../../providers/ToastProvider";
 

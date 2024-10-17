@@ -26,16 +26,11 @@ export interface ITextFieldProps
 }
 export default function TextField(props: ITextFieldProps) {
   const {
-    variant = "outlined",
     label = "",
     id,
-    elementClassName,
-    labelClassName,
     element = "input",
     error,
-    required,
     className,
-    children,
     value,
     type = "text",
     disabled,
@@ -44,15 +39,14 @@ export default function TextField(props: ITextFieldProps) {
     onChange,
     editable = true,
     defaultValue,
-    placeholder,
-    ...otherProps
+    placeholder
   } = props;
 
-  const inputStyles: { [key: string]: string } = {
-    // other variants could be added here
-    "outlined-input": "bg-white focus:border-gray-primary autofill:!bg-white",
-    "outlined-label": "bg-white text-gray-line",
-  };
+  // const inputStyles: { [key: string]: string } = {
+  //   // other variants could be added here
+  //   "outlined-input": "bg-white focus:border-gray-primary autofill:!bg-white",
+  //   "outlined-label": "bg-white text-gray-line",
+  // };
 
   return (
     <div className={clsx([fullWidth && "w-full", className])}>

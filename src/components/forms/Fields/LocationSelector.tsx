@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import nmp_mapboxgl from "@neshan-maps-platform/mapbox-gl";
 import "@neshan-maps-platform/mapbox-gl/dist/NeshanMapboxGl.css";
 interface ILocationSelectorProps {
@@ -6,19 +6,15 @@ interface ILocationSelectorProps {
   disabled: boolean;
   onChange: (value: string) => void;
 }
-const LocationSelector = ({
-  onChange,
-  disabled,
-  value,
-}: ILocationSelectorProps) => {
-  function getLngLatFromString(value: string | undefined) {
-    let formedValue = value?.split(",");
-    if (formedValue?.length !== 2) return { lng: 0, lat: 0 };
-    return {
-      lng: parseFloat(formedValue ? formedValue[0] : "0"),
-      lat: parseFloat(formedValue ? formedValue[1] : "0"),
-    };
-  }
+const LocationSelector = ({ onChange }: ILocationSelectorProps) => {
+  // function getLngLatFromString(value: string | undefined) {
+  //   let formedValue = value?.split(",");
+  //   if (formedValue?.length !== 2) return { lng: 0, lat: 0 };
+  //   return {
+  //     lng: parseFloat(formedValue ? formedValue[0] : "0"),
+  //     lat: parseFloat(formedValue ? formedValue[1] : "0"),
+  //   };
+  // }
   const [map, setMap] = useState<any>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const [lng, setLng] = useState<number>();

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProfilePicture = ({ fullName }: { fullName: string }) => {
   // Function to get initials
   const getInitials = (name: string) => {

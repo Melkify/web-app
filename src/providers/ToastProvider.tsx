@@ -1,7 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
 
-const ToastContext = createContext({});
-
+const ToastContext = createContext<ToastContextType | null>(null);
+type ToastContextType = {
+  showToast: (message: string, type?: "info" | "success" | "error") => void;
+  hideToast: (id: number) => void;
+  toasts: Toast[];
+};
 type Toast = {
   id: number;
   message: string;

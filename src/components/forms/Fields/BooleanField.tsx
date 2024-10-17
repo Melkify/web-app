@@ -1,6 +1,6 @@
 "use client";
 import clsx from "clsx";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import Label from "./Label";
 interface Props {
   className: string;
@@ -22,13 +22,10 @@ const ChoiceField = (props: Props) => {
     label,
     id,
     onChange,
-    name,
-    required,
     value,
     isOptional,
     error,
     fullWidth,
-    disabled = false,
   } = props;
   return (
     <div className={clsx([fullWidth && "w-full", className])}>

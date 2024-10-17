@@ -1,4 +1,9 @@
-const SectionTitle = (props) => {
+const SectionTitle = (props: {
+  pretitle?: string;
+  title?: string;
+  align?: "left" | "center";
+  children?: React.ReactNode;
+}) => {
   return (
     <div
       className={`mt-4 m-8 flex w-full flex-col ${

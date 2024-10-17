@@ -1,13 +1,7 @@
 import { FormEvent } from "react";
 import Button from "./Button";
 import { Control, Controller, FieldErrors, FieldValues } from "react-hook-form";
-import {
-  BooleanField,
-  ChoiceField,
-  LocationField,
-  SelectField,
-  TextField,
-} from "./Fields";
+import { BooleanField, LocationField, SelectField, TextField } from "./Fields";
 import { TFieldType } from "../../types";
 import clsx from "clsx";
 
@@ -30,7 +24,6 @@ export default function Form({
   btnText,
   control,
   errors,
-  isValid,
   onSubmit,
   subform,
   select,
@@ -46,21 +39,7 @@ export default function Form({
           defaultValue={field.defaultValue || ""}
           render={({ field: { value, onChange, onBlur, name } }) => (
             <>
-              {field.type === "choices" ? (
-                <ChoiceField
-                  className="mb-4"
-                  fullWidth
-                  label={field.label}
-                  id={field.name}
-                  error={`${errors[field.name]?.message || ""}`}
-                  isOptional={!field.rules?.required}
-                  options={field.options}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  name={name}
-                />
-              ) : field.type === "boolean" ? (
+              {field.type === "boolean" ? (
                 <BooleanField
                   className="mb-4"
                   label={field.label}
